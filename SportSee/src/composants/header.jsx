@@ -1,5 +1,12 @@
-export default function header() {
+import {NavLink} from 'react-router-dom';
+
+export default function Header() {
   return (
-    <div>header</div>
+    <div>SportSee</div>
+    <nav>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/logement">Logement</NavLink>
+        <NavLink to="/about">About</NavLink>
+    </nav>
   )
 }
