@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import Home from './pages/home'
 import About from './pages/about'
-import Logement from './pages/logement'
+import Profile from './pages/profile'
 import Root from './pages/root'
 import './index.scss'
 import {
@@ -13,22 +13,22 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-        element: <Root />,
-        children: [
-            {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/about",
-    element: <About />,
-  },
-  {
-    path: "/logement/:id",
-    element: <Logement />,
-},
-      ]
-    }
+    element: <Root />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/profile/:id",
+        element: <Profile />,
+      },
+    ]
+  }
 ]);
 
 createRoot(document.getElementById('root')).render(

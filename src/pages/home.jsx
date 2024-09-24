@@ -5,7 +5,7 @@ function Home() {
   return (
     <>
 <p><main>Bienvenue 
-<Link to ="/logement/12"> logement 12 </Link>
+<Link to ="/profile/12"> profile 12 </Link>
 
   </main></p>
      
