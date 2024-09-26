@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom' // This imports the Link component from the react-router-dom library, which is used to create navigation links between different pages in a React application.
 
 function Home() {
 
