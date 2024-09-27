@@ -1,6 +1,7 @@
-import React, { PureComponent } from 'react';
+import { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 /*
+
 const data = [
   {
     name: 'Page A',
@@ -46,7 +47,7 @@ const data = [
   },
 ];*/
 
-const data = [
+/* const data = [
           {
               day: '2020-07-01',
               kilogram: 80,
@@ -83,13 +84,25 @@ const data = [
               calories: 390
           }
       ]
+*/
+export default function Barchart(props) {
+  const [data, setData] = useState([])
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch(`http://localhost:3000/user/${props.currentId}/activity/`)
+        const responseData = await response.json()
+        setData(responseData.data.sessions)
+      }
+      catch (e) {
+        console.log(e)
+      }
+    }
+    fetchData()
+  }, [])
 
-
-export default function Barchart() {
-
-  
-    return (
-      <div className='BarChart'>
+  return (
+    <div className='BarChart'>
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           width={500}
@@ -102,17 +115,17 @@ export default function Barchart() {
             bottom: 5,
           }}
         >
-          <CartesianGrid strokeDasharray="3 3" vertical={false}/>
+          <CartesianGrid strokeDasharray="3 3" vertical={false} />
           <XAxis dataKey="date" />
           <YAxis yAxisId="left" orientation="left" stroke="#8884d8" hide={true} />
-          <YAxis yAxisId="right" orientation="right" stroke="#82ca9d" hide={true}  />
+          <YAxis yAxisId="right" orientation="right" stroke="#82ca9d" hide={true} />
           <Tooltip />
           <Legend />
-          <Bar yAxisId="left" dataKey="kilogram" fill="#282D30" barSize={10} radius={[5, 5, 0, 0]}/>
-          <Bar yAxisId="right" dataKey="calories" fill="#E60000" barSize={10} radius={[5, 5, 0, 0]}/>
+          <Bar yAxisId="left" dataKey="kilogram" fill="#282D30" barSize={10} radius={[5, 5, 0, 0]} />
+          <Bar yAxisId="right" dataKey="calories" fill="#E60000" barSize={10} radius={[5, 5, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
-      </div>
-    );
-  }
+    </div>
+  );
+}
 
