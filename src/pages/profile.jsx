@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import Barchart from '../composants/bar'
 import Activity from '../composants/tinyLine'
+import Performance from '../composants/Performance'
 
 export default function Profile() {
   const { id } = useParams()
@@ -14,8 +15,8 @@ export default function Profile() {
         <div className='Activity' style={{ height: '300px', width: '100%' }}>
           <Activity currentId={id} />
         </div>
-        <div className='GridItem'>
-          GridItem 1
+        <div className='RadarChartComponent' style={{ height: '300px', width: '100px' }}>
+          <Performance currentId={id} />
         </div>
         <div className='GridItem'>
           GridItem 2

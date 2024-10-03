@@ -3,6 +3,9 @@ import pictoCycling from "../../assets/image/bicycle.svg";
 import pictoMeditation from "../../assets/image/yoga/svg";
 import pictoSwimming from "../../assets/image/swim.svg";
 
+// Define the Disclaimer component
+const Disclaimer = ({ children }) => <div>{children}</div>;
+
 export function AsideNav() {
   return (
     <AsideNavContainer>
