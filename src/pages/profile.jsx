@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom'
 import Barchart from '../composants/bar'
 import Activity from '../composants/tinyLine'
 import Performance from '../composants/Performance'
+import Exemple from '../composants/score'
 
 export default function Profile() {
   const { id } = useParams()
@@ -19,7 +20,7 @@ export default function Profile() {
           <Performance currentId={id} />
         </div>
         <div className='GridItem'>
-          GridItem 2
+          <Exemple currentId={id} />
         </div>
       </div>
     </div>
