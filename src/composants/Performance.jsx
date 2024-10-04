@@ -45,7 +45,7 @@ import {
  * @param {UserPerformance} props.userPerformance
  * @returns {JSX.Element}
  */
-const Performance = ({ currentId }) => {
+function Performance({ currentId }) {
   const [data, setData] = useState([])
   useEffect(() => {
     async function fetchData() {
