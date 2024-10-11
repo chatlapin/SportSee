@@ -1,8 +1,6 @@
 import React from 'react';
 import { RadialBarChart, RadialBar, Legend, ResponsiveContainer } from 'recharts';
-import useFetch from './useFetch';
-
-const url = 'http://localhost:3000/user/${currentId}/average-sessions/'; // replace with your API endpoint
+import useFetch from '@/services/useFetch';
 
 const style = {
     top: '50%',
@@ -11,7 +9,8 @@ const style = {
     lineHeight: '24px',
 };
 
-export default function Example() {
+export default function Example({ currentId }) {
+    const url = `http://localhost:3000/user/${currentId}/performance/`; // replace with your API endpoint
     const { data, loading, error } = useFetch(url);
 
     if (loading) {

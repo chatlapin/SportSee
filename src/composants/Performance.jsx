@@ -1,5 +1,5 @@
 import { ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, Radar } from 'recharts';
-import useFetch from './useFetch';
+import useFetch from '@/services/useFetch';
 
 const Performance = ({ currentId }) => {
   const { data, loading, error } = useFetch(`http://localhost:3000/user/${currentId}/performance/`);
@@ -18,8 +18,8 @@ const Performance = ({ currentId }) => {
     <div style={{ width: '200px', height: '200px', backgroundColor: 'black', padding: '20px' }}>
       <ResponsiveContainer width="100%" height="100%">
         <RadarChart cx="50%" cy="50%" outerRadius="80%" data={formattedData}>
-          <PolarGrid stroke='white' />
-          <PolarAngleAxis dataKey="kind" tick={{ fontSize: 12, fill: 'white', fontFamily: 'ans-serif' }} tickLine={false} stroke="white" dy={4} />
+          <PolarGrid radialLines={false} stroke='white' />
+          <PolarAngleAxis dataKey="kind" tickLine={false} tick={{ fontSize: 12, fill: 'white' }} stroke="white" dy={4} />
           <Radar name="Kind" dataKey="value" fill="#ff0000" fillOpacity={0.6} />
         </RadarChart>
       </ResponsiveContainer>
