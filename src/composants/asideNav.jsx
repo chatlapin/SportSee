@@ -1,45 +1,38 @@
-import PropTypes from 'prop-types'; // Import PropTypes for validation
-import pictoBodybuilding from "../../assets/image/weight.svg";
-import pictoCycling from "../../assets/image/bicycle.svg";
-import pictoMeditation from "../../assets/image/yoga.svg";
-import pictoSwimming from "../../assets/image/swim.svg";
+import pictoBodybuilding from "@/assets/image/weight.svg";
+import pictoCycling from "@/assets/image/bicycle.svg";
+import pictoMeditation from "@/assets/image/yoga.svg";
+import pictoSwimming from "@/assets/image/swim.svg";
+import { NavLink } from "react-router-dom";
 
-// Define the Disclaimer component
-const Disclaimer = ({ children }) => <div>{children}</div>;
-
-Disclaimer.propTypes = {
-  children: PropTypes.node.isRequired, // Validate that children is required
-};
-
-export function AsideNav() {
+export default function AsideNav() {
   return (
     <aside>
       <nav>
         <ul>
           <li>
-            <a href="/">
+            <NavLink to="#">
               <img src={pictoMeditation} alt="Méditation" />
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="/">
+            <NavLink to="#">
               <img src={pictoSwimming} alt="Natation" />
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="/">
+            <NavLink to="#">
               <img src={pictoCycling} alt="Cyclisme" />
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="/">
+            <NavLink to="#">
               <img src={pictoBodybuilding} alt="Musculation" />
-            </a>
+            </NavLink>
           </li>
         </ul>
       </nav>
 
-      <Disclaimer>Copyright SportSee 2020</Disclaimer>
+      <p>Copyright SportSee 2020</p>
     </aside>
   );
 }

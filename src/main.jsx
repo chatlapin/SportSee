@@ -4,7 +4,7 @@ import Home from './pages/home'
 import About from './pages/about'
 import Profile from './pages/profile'
 import Root from './pages/root'
-import './index.scss'
+import './style/index.scss'
 import {
   createBrowserRouter,
   RouterProvider,

@@ -1,7 +1,8 @@
-import React from 'react';
+
 import { RadialBarChart, RadialBar, Legend, ResponsiveContainer } from 'recharts';
 import useFetch from '@/services/useFetch';
-import { json } from 'react-router-dom';
+
+import PropTypes from 'prop-types';
 
 const style = {
     top: '50%',
@@ -10,7 +11,7 @@ const style = {
     lineHeight: '24px',
 };
 
-export default function Example({ currentId }) {
+export default function Score({ currentId }) {
     const url = `http://localhost:3000/user/${currentId}/`; // replace with your API endpoint
     const { data, loading, error } = useFetch(url);
     console.log("score")
@@ -46,3 +47,7 @@ export default function Example({ currentId }) {
         </div>
     );
 }
+
+Score.propTypes = {
+    currentId: PropTypes.number.isRequired,
+};
