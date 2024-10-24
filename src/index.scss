@@ -13,6 +13,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
 .BarChart {
   width: 90vw;
   height: 40vh;
@@ -80,19 +82,5 @@ button:focus-visible {
 
   button {
     background-color: #f9f9f9;
-  }
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.6em 2em;
-  width: 80%;
-  margin: auto;
-
-  nav {
-    display: flex;
-    gap: 1em;
   }
 }

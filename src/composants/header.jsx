@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import SportSeeLogo from "../assets/image/logo.svg";
+import './header.css';
 
 export default function Header() {
   return (
@@ -9,8 +10,8 @@ export default function Header() {
       </a>
       <nav>
         <ul>
-          <li> 
-          <NavLink to="/" > Accueil</NavLink>
+          <li>
+            <NavLink to="/" > Accueil</NavLink>
           </li>
           <li>
             <NavLink href="/about">Profil</NavLink>
