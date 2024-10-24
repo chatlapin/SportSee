@@ -1,40 +1,45 @@
+import PropTypes from 'prop-types'; // Import PropTypes for validation
 import pictoBodybuilding from "../../assets/image/weight.svg";
 import pictoCycling from "../../assets/image/bicycle.svg";
-import pictoMeditation from "../../assets/image/yoga/svg";
+import pictoMeditation from "../../assets/image/yoga.svg";
 import pictoSwimming from "../../assets/image/swim.svg";
 
 // Define the Disclaimer component
 const Disclaimer = ({ children }) => <div>{children}</div>;
 
+Disclaimer.propTypes = {
+  children: PropTypes.node.isRequired, // Validate that children is required
+};
+
 export function AsideNav() {
   return (
-    <AsideNavContainer>
+    <aside>
       <nav>
-        <ActivitiesList>
+        <ul>
           <li>
             <a href="/">
-              <ActivityPicto src={pictoMeditation} alt="Méditation" />
+              <img src={pictoMeditation} alt="Méditation" />
             </a>
           </li>
           <li>
             <a href="/">
-              <ActivityPicto src={pictoSwimming} alt="Natation" />
+              <img src={pictoSwimming} alt="Natation" />
             </a>
           </li>
           <li>
             <a href="/">
-              <ActivityPicto src={pictoCycling} alt="Cyclisme" />
+              <img src={pictoCycling} alt="Cyclisme" />
             </a>
           </li>
           <li>
             <a href="/">
-              <ActivityPicto src={pictoBodybuilding} alt="Musculation" />
+              <img src={pictoBodybuilding} alt="Musculation" />
             </a>
           </li>
-        </ActivitiesList>
+        </ul>
       </nav>
 
       <Disclaimer>Copyright SportSee 2020</Disclaimer>
-    </AsideNavContainer>
+    </aside>
   );
 }

@@ -1,14 +1,27 @@
-import { useParams } from 'react-router-dom'
-import Barchart from '../composants/bar'
-import Activity from '../composants/tinyLine'
-import Performance from '../composants/Performance'
-import Exemple from '../composants/score'
+import { useParams } from 'react-router-dom';
+import Barchart from '../composants/bar';
+import Activity from '../composants/tinyLine';
+import Performance from '../composants/Performance';
+import Exemple from '../composants/score';
+import { USER_MAIN_DATA } from '../../public/data/data.js';
 
 export default function Profile() {
-  const { id } = useParams()
+  const { id } = useParams();
+
+  // Find the user data based on the id
+  const userData = USER_MAIN_DATA.find((user) => user.id === parseInt(id));
+
+  // If user data is not found, display an error message or redirect
+  if (!userData) {
+    return <p>User not found.</p>;
+  }
+
+  const { firstName } = userData.userInfos;
+
   return (
     <div>
-      <p>Nous sommes dans le profile {id}</p>
+      <p>Bonjour {firstName}</p>
+      <p>Félicitation ! Vous avez explosé vos objectifs hier </p>
       <div className='Barchart' style={{ height: '800px', width: '100%' }}>
         <Barchart currentId={id} />
       </div>
@@ -24,5 +37,5 @@ export default function Profile() {
         </div>
       </div>
     </div>
-  )
+  );
 }
