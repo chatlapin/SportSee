@@ -159,3 +159,22 @@ docker login
 docker logout
 
 docker push chatlapin517/sportsee:tagname
+
+postman authorization token
+authentification who you are
+authorization what you can do
+
+postman tuto1
+https://www.youtube.com/watch?v=T8gxrOKbAHY&list=PLbwZ_0ncMaxgiLi_hiRJS2z9MApGkeYnZ&index=2
+tuto2 https://www.w3schools.com/tags/ref_httpmethods.asp
+
+API sample
+http.cat/200
+https://reqres.in/api/users/2
+https://bookstore.demoqa.com/Account/v1/GenerateToken
+
+two modes
+build mode
+browse mode
+
+sidebar header navigation
