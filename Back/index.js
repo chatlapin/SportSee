@@ -1,20 +1,23 @@
 const express = require("express");
-const app = express();
 const {
   USER_MAIN_DATA,
   USER_ACTIVITY,
   USER_AVERAGE_SESSIONS,
   USER_PERFORMANCE,
-} = require("./data");
+} = require("./data.js");
+
+const app = express();
 
 app.get("/api/user/:userId/performance", (req, res) => {
   const userId = parseInt(req.params.userId);
+  console.log(`Requested userId: ${userId}`);
   const userPerformance = USER_PERFORMANCE.find(
     (user) => user.userId === userId
   );
   if (userPerformance) {
     res.json(userPerformance);
   } else {
+    console.log(`User performance not found for userId: ${userId}`);
     res.status(404).json({ message: "User performance not found" });
   }
 });
