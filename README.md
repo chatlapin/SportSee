@@ -36,13 +36,13 @@ URL disponibles dans ce projet:
     "vite": "^6.0.3"
   }
 
-1. Version Desktop seulement
-2. React : Séparation logique du code dans des composants réutilisables.
-3. Utilisation de D3 ou de Recharts pour générer les graphiques.
-4. Données : Utilisation d’une API en faisant des calls HTTP sur le backend NodeJS fourni en utilisant Fetch ou Axios.
-Les calls doivent être réalisé en dehors des composants React.
-un mock des données doit être réalisé pour commencer.
-le schéma des données étant légèrement différent selon les utilisateurs, une uniformisation des données provenant de l'API est nécessaire pour formater les correctement.
+1. Récupération des données auprès de l’API 
+2. Création et affichage des graphiques 
+3. Séparation logique du code dans des composants réutilisables
+   
+1. La gestion des calls asynchrones et des promesses ;
+2. Le cycle de vie d’une application React avec des données asynchrones ;
+3. L’utilisation de la librairie graphique (découverte, prise en main, etc.).
 
 # Source
 1. Figma: https://www.figma.com/design/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=1-2&node-type=frame&t=bVLroY0ou0vCuTuy-0
