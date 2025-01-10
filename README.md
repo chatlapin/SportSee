@@ -44,8 +44,9 @@ Les calls doivent être réalisé en dehors des composants React.
 un mock des données doit être réalisé pour commencer.
 le schéma des données étant légèrement différent selon les utilisateurs, une uniformisation des données provenant de l'API est nécessaire pour formater les correctement.
 
-Figma: https://www.figma.com/design/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=1-2&node-type=frame&t=bVLroY0ou0vCuTuy-0
-Back-end: https://github.com/OpenClassrooms-Student-Center/SportSee
-Kanban: https://openclassrooms.notion.site/Tableau-de-bord-SportSee-6686aa4b5f44417881a4884c9af5669e
+# Source
+1. Figma: https://www.figma.com/design/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR?node-id=1-2&node-type=frame&t=bVLroY0ou0vCuTuy-0
+2. Back-end: https://github.com/OpenClassrooms-Student-Center/SportSee
+3. Kanban: https://openclassrooms.notion.site/Tableau-de-bord-SportSee-6686aa4b5f44417881a4884c9af5669e
 
 
