@@ -19,9 +19,9 @@ Le front-end sera lancé à l'URL: (http://localhost:5173/)
 
 URL disponibles dans ce projet:
 
-http://localhost:5173/
-http://localhost:5173/profile/12
-http://localhost:5173/profile/18
+1. http://localhost:5173/
+2. http://localhost:5173/profile/12
+3. http://localhost:5173/profile/18
 
 dependencies": {
     "react": "^18.3.1",
