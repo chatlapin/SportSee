@@ -23,7 +23,7 @@ URL disponibles dans ce projet:
 2. http://localhost:5173/profile/12
 3. http://localhost:5173/profile/18
 
-dependencies": {
+"dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router": "^7.1.0",
