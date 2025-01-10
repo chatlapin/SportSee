@@ -27,7 +27,7 @@ dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router": "^7.1.0",
-    "recharts": "^2.15.0"
+    "recharts": "^2.15.0"}
 
     "devDependencies": {
     ...
@@ -35,7 +35,6 @@ dependencies": {
     "tailwindcss": "^3.4.17",
     "vite": "^6.0.3"
   }
-}
 
 1. Version Desktop seulement
 2. React : Séparation logique du code dans des composants réutilisables.
